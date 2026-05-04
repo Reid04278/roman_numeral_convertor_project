@@ -1,5 +1,5 @@
-# This code is made by Reid Hyman
-tallies = {
+# Create Roman Numerals
+tallie = {
     "I": 1,
     "V": 5,
     "X": 10,
@@ -11,16 +11,16 @@ tallies = {
 }
 
 
-def RomanNumeralToDecimal(romanNumeral):
+def RomanNumeralToDecimal(roman_Numeral):
     sum = 0
-    for i in range(len(romanNumeral) - 1):
-        left = romanNumeral[i]
-        right = romanNumeral[i + 1]
-        if tallies[left] < tallies[right]:
-            sum -= tallies[left]
+    for i in range(len(roman_Numeral) - 1):
+        left = roman_Numeral[i]
+        right = roman_Numeral[i + 1]
+        if tallie[left] < tallie[right]:
+            sum -= tallie[left]
         else:
-            sum += tallies[left]
-    sum += tallies[romanNumeral[-1]]
+            sum += tallie[left]
+    sum += tallie[roman_Numeral[-1]]
     return sum
 
 
